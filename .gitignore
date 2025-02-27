@@ -1,0 +1,45 @@
+# Ignore node_modules and environment files
+/node_modules
+.env
+
+# TypeScript and build configuration
+tsconfig.json
+tsup.config.ts
+./tsconfig.tsbuildinfo
+.tsup.config.ts
+
+# Ignore build and cache directories
+dist/
+build/
+.cache
+
+# Ignore specific log files
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# Ignore generated directories and data
+/uploads
+.mermaid
+
+# Allow only specific subdirectories in the Yarn folder
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
+# Allow source files (main application code)
+!src/**
+
+# Ignore API testing files
+request.http
+.npmignore
+
+# NPM package files
+*.tgz
+
+# Generated index file
+src/index.ts
+index.ts
