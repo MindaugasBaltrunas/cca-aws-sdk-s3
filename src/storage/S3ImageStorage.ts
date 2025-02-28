@@ -10,17 +10,16 @@ import * as path from 'path';
 import { v4 as uuidv4 } from 'uuid';
 
 import { IImageStorage, UploadResult } from '../domain/interfaces/IImageStorage';
-import { StorageError } from '../utils/Errors';
-import { STORAGE_CONSTANTS } from '../constants/storageConstants';
+import { IImageUrls } from '../domain/interfaces/IImageUrls';
 import { ImageSize } from '../domain/types/ImageSize';
 import { ImageUrlDTO } from '../application/dto/ImageUrlDTO';
-import { IImageUrls } from '../domain/interfaces/IImageUrls';
+import { STORAGE_CONSTANTS } from '../constants/storageConstants';
+import { StorageError } from '../utils/Errors';
+
 import { validateFile } from './helpers/validateFile';
 import { uploadToS3 } from './helpers/uploadToS3';
 import { resizeAndUpload } from './helpers/resizeAndUpload';
 import { getImageExtension } from './helpers/getImageExtension';
-
-
 
 export interface S3ImageConfig {
   region: string;

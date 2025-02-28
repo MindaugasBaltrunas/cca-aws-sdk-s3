@@ -8,6 +8,7 @@
     "README.md"
   ],
   "scripts": {
+    "clean": "rimraf dist",
     "build:tsup": "tsup src/index.ts --format cjs,esm --dts --metafile",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,9 +16,11 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@swc/core": "^1.11.4",
     "@types/express": "^5.0.0",
     "@types/multer": "^1.4.12",
     "@types/node": "^22.13.5",
+    "rimraf": "^6.0.1",
     "typescript": "^4.0.0"
   },
   "dependencies": {
@@ -25,6 +28,7 @@
     "@aws-sdk/s3-request-presigner": "^3.750.0",
     "@types/uuid": "^10.0.0",
     "sharp": "^0.33.5",
-    "tsup": "^8.4.0"
+    "tsup": "^8.4.0",
+    "uuid": "^11.1.0"
   }
 }
