@@ -81,7 +81,7 @@ export class S3ImageStorage implements IImageStorage {
     });
 
     const metadata: ImageMetadata = {
-      id,
+      id: id,
       originalName: file.originalname,
       mimeType: 'image/webp',
       ORIGINAL_size_kb: sizeMap.original,
