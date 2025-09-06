@@ -1,22 +1,13 @@
 {
   "name": "cca-aws-sdk-s3",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "s3 module",
-  "main": "dist/index.cjs",
-  "module": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "type": "module",
+  "main": "dist/index.js",
   "files": [
     "dist",
     "README.md"
   ],
-  "exports": {
-    ".": {
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs",
-      "types": "./dist/index.d.ts"
-    }
-  },
+  "type": "module",
   "scripts": {
     "clean": "rimraf dist",
     "build:tsup": "tsup src/index.ts --format cjs,esm --dts --metafile",
